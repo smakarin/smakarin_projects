@@ -36,37 +36,37 @@ To identify patterns in the sales of different genres and platforms. To define s
     * Average user ratings for the Action and Sports genres are different.
 6. Overall conclusion 
 
-### Общий вывод
+### Overall Conclusion
 
-В результате проведенного анализа были сделаны следующие выводы:
-1. Комментарии по исследованию:
-Для анализа были взяты данные, начиная с 2012 года. Более старые данные не актуальны из-за смены поколений игровых платформ;
-2. Выводы по исследованию платформ:
-    * Потенциально наиболее прибыльными в 2017 году платформами являются PS4 и XOne. Также не стоит упускать из виду платформы 3DS и WiiU, которые, очень популярны в Японии и также находятся в лидерах по продажам.
-    * Продажи для PC держатся на одном уровне и не зависят от смены платформ;
-    * Наибольшие медианные продажи приходятся на платформы PS3, PS4, X360, Xone. Чуть ниже располагаются Wii и WiiU;
-    * Средний пользовательский рейтинг платформ XOne и PC равен.
-3. Выводы по исследованию игр
-    * Оценки критиков влияют на продажи игр, а оценки пользователей нет. Исключение - игр для платформ от компании Nintendo - WiiU, Wii, DS и 3DS;
-    * Самое большое количество игр выпускается в жанре Action. Самым прибыльным жанром является жанр Shooter;
-    * Жанр Platform входит в тройку по прибыльности, но находится в конце списка по количеству выпускаемых игр;
-    * Средний пользовательский рейтинг игр жанра Action выше, чем у жанра Sports.
-4. Выводы по изучению портрета пользователей
-    * Портреты пользователей в Северной Америке и Европе похожи, за исключением предпочтений в выборе игровой платформы - в Европе больше любят PS, в Америке Xbox.
-    * Наиболее популярные жанры в Европе и Америке это Action, Shooter и Sports. Наиболее популярный рейтинг - M.
-    * Портрет пользователя в Японии очень сильно отличается от Европы и Северной Америки:
-    * В топ-5 самых популярных входят только местные платформы (PS и Nintendo), Xbox нет в топ-5 - самой популярной платформой является портативная 3DS.
-    * Самым популярным жанром является Role-Playing, а на пятое место попали игры Fighting.
-    * Много локальных игр, которые не вышли на международный рынок и их продажи занимают больше половины рынка.
-    * Самыми популярными играми являются игры с рейтингом E и T. Рейтинг M только на 3 месте, не включая неопределенный.
-5. Обобщенные портреты пользователей
-    * Северная Америка - старше 17 лет, предпочитает американские товары, любит играть дома, любит активные игры (Action, Shooter) и увлечен спортом;
-    * Европа - средний пользователь похож на американского за исключением того, что не привязан к стране производителю платформ;
-    * Япония - средний пользователь - школьник, который любит играть вне дома по пути в школу или в школе, любит японские игры и платформы, создавать своих персонажей в играх и ассоциировать себя с ними. Также больше остальных он предпочитает Fighting.  
+As a result of the conducted analysis, the following conclusions were drawn:
+1. Comments on the research:
+The data used for analysis starts from 2012. Older data are not relevant due to the change in generations of gaming platforms;
+2. Conclusions on platform research:
+    * Potentially, the most profitable platforms in 2017 will be PS4 and XOne. Also, one should not overlook the 3DS and WiiU platforms, which are very popular in Japan and are also leaders in sales.
+    * PC sales remain at the same level and are not affected by platform changes;
+    * The largest median sales are for PS3, PS4, X360, XOne platforms. Slightly below are Wii and WiiU;
+    * The average user rating of the XOne and PC platforms is equal.
+3. Conclusions on game research:
+    * Critics' ratings affect game sales, while user ratings do not. The exception is games for Nintendo platforms - WiiU, Wii, DS, and 3DS;
+    * The largest number of games is released in the Action genre. The most profitable genre is Shooter;
+    * The Platform genre is among the top three in terms of profitability, but it is at the end of the list in terms of the number of games released;
+    * The average user rating of Action games is higher than that of Sports games.
+4. Conclusions on user portrait research:
+    * User portraits in North America and Europe are similar, with the exception of preferences in choosing a gaming platform - Europe prefers PS, America prefers Xbox.
+    * The most popular genres in Europe and America are Action, Shooter, and Sports. The most popular rating is M.
+    * The user portrait in Japan is very different from Europe and North America:
+    * The top 5 most popular include only local platforms (PS and Nintendo), Xbox is not in the top 5 - the most popular platform is the portable 3DS.
+    * The most popular genre is Role-Playing, and Fighting games made it to the fifth place.
+    * There are many local games that have not hit the international market and their sales occupy more than half of the market.
+    * The most popular games are games with E and T ratings. The M rating is only in 3rd place, not including the unspecified.
+5. Generalized user portraits:
+    * North America - over 17 years old, prefers American products, likes to play at home, enjoys active games (Action, Shooter) and is into sports;
+   * Europe - the average user is similar to the American one, except that he is not tied to the country of the platform manufacturer;
+   * Japan - the average user is a schoolboy who likes to play outside of home on the way to school or at school, loves Japanese games and platforms, likes to create his characters in games and associate himself with them. He also prefers Fighting more than others.
     
-### Резюме  
+### Summary  
 
-Основными критериями, определяющими успешность игры во всем мире в 2017 году будут:
-* Игра выпущена для платформ PS4 и XOne, при локализации в Японии стоит подумать о выпуске игры для портативных платформ;
-* Игра должна быть жанра Shooter, Platform или Sports. Жанр Action популярен среди пользователей, но его медианные продажи ниже перечисленных ранее.
-* Рейтинг игры для Северной Америки и Европы должен быть обозначен, как М. При выпуске игры в Японии стоит подумать о снижении рейтинга до E.
+The main criteria that will determine the success of a game worldwide in 2017 will be:
+   * The game is released for PS4 and XOne platforms, when localizing in Japan consider releasing the game for portable platforms;
+   * The game should be of the Shooter, Platform, or Sports genre. The Action genre is popular among users, but its median sales are lower than those previously listed.
+   * The game's rating for North America and Europe should be marked as M. When releasing a game in Japan, consider lowering the rating.
