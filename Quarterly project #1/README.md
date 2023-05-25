@@ -1,37 +1,40 @@
 
-## Прогнозирование популярности видео-игр
+## Predicting Video Game Popularity
 
-### Набор инструментов
+### Toolkit
 
-Предобработка данных: работа с пропусками, группировка таблиц, обработка дубликатов, pandas;   
-Визуализация данных: seaborn и plotly;   
-Проверка гипотез, библиотека scipy.  
+Data Preprocessing: handling missing values, table grouping, duplicate handling, pandas;
+Data Visualization: seaborn and plotly;
+Hypothesis Testing: scipy library. 
 
-### Вводные данные
+### Input Data
 
-В данном проекте из открытых источников доступны исторические данные о продажах игр, оценки пользователей и экспертов, жанры и платформы (например, Xbox или PlayStation).  
-Имеются размеченные данные: информация об играх, платформах, оценках, количестве проданных копий с разбивкой по регионам и возрастным группам.
-### Цель
-Выявить закономерности в продажах различных жанров и платформ. Определить успешные жанры. Проверить предложенные гипотезы.  
-### Структура проекта  
-1. Изучение общей информации в имеющемся файле.
-2. Подготовка данных для анализа.
-3. Исследовательский анализ данных:
-    * Изучение количества выпущенных игр по годам;
-    * Анализ продаж игр на разных платформах за все время;
-    * Определение периода, по которому можно построить прогноз на 2017 год;
-    * Анализ платформ и выбор наиоблее перспективных;
-    * Есть ли разница продаж каждой игры на разных платформах?
-    * Как влияют отзывы пользователей и критиков на продажи?
-    * Анализ прибыльности разных жанров.
-4. Составление портрета пользователя каждого региона:  
-    * Топ-5 самых популярных платформ;
-    * Топ-5 самых популярных жанров;
-    * Влияет ли рейтинг ESRB на продажи в отдельном регионе?
-5. Проверка гипотез:
-    * Средние пользовательские рейтинги платформ Xbox One и PC одинаковые;
-    * Средние пользовательские рейтинги жанров Action (англ. «действие») и Sports (англ. «виды спорта») разные.
-6. Общий вывод  
+In this project, historical data about game sales, user and expert ratings, genres, and platforms (e.g., Xbox or PlayStation) are available from open sources.
+There is labeled data: information about games, platforms, ratings, the number of copies sold, broken down by regions and age groups.
+
+### Objective
+
+To identify patterns in the sales of different genres and platforms. To define successful genres. To test proposed hypotheses.
+
+### Project Structure  
+1. Studying the general information in the available file.
+2. Preparing data for analysis.
+3. Exploratory data analysis:
+    * Study of the number of games released per year;
+    * Analysis of game sales on different platforms over time;
+    * Determining the period based on which we can forecast for the year 2017;
+    * Analysis of platforms and choosing the most promising ones;
+    * Is there a difference in the sales of each game on different platforms?
+    * How do user and critic reviews affect sales?
+    * Analysis of the profitability of different genres.
+4. Creating a user profile for each region:  
+    * Top 5 most popular platforms;
+    * Top 5 most popular genres;
+    * Does the ESRB rating affect sales in a particular region?
+5. Hypothesis testing:
+    * Average user ratings for the Xbox One and PC platforms are the same;
+    * Average user ratings for the Action and Sports genres are different.
+6. Overall conclusion 
 
 ### Общий вывод
 
