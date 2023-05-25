@@ -1,31 +1,32 @@
 
-## Определение цены автомобиля по имеющимся характеристикам
+## Determining Car Price Based on Available Features
 
-### Набор инструментов
+### Toolkit
 
-Предобработка данных: обработка пропусков и дубликатов, изменение типа данных, группировка таблиц;  
-Применение стандартных моделей прогнозирования и моделей градиентного бустинга: sklearn, LigtGBM, XGBoost, CatBoost;  
-Проверка результатов на валидационной и тестовых выборках.
-### Вводные данные
-В данном проекте стоит задача построить модель для определения стоимости автомобиля для сервиса по продаже автомобилей с пробегом, который разрабатывает приложение для привлечения новых клиентов. В распоряжении есть следующие данные: технические характеристики, комплектации и цены автомобилей.
-Заказчику важны:
-* качество предсказания;
-* скорость предсказания;
-* время обучения.  
+Data preprocessing: handling missing values and duplicates, changing data types, grouping tables;  
+Applying standard prediction models and gradient boosting models: sklearn, LightGBM, XGBoost, CatBoost;  
+Checking results on validation and test samples.  
+### Introduction
+The project task is to build a model for determining the cost of a car for a used car sales service that is developing an application to attract new customers. We have the following data at our disposal: technical specifications, configurations, and car prices.  
+The customer is interested in:
 
-### Цель 
-Создание модели, которая предсказывает цену автомобиля на основании определенных принаков.
-Имеются размеченные данные: характеристики автомобилей и цена продажи.  
+  * prediction quality;
+  * prediction speed;
+  * training time.
 
-### Структура проекта 
-1. Загрузка и обработка данных: заполнение пропусков, группировка по признакам, поиск дубликатов, визуализация результатов;
-2. Обучение моделей градиентного бустинга, анализ скорости обучения;
-3. Обучение моделей прогнозирования, требующих dummy-преобразования - линейная регрессия, случайный лес.
-4. Валидация моделей и выбор лучшей.  
+### Goal 
+Creation of a model that predicts the price of a car based on certain features.  
+There is labeled data: car characteristics and sales price.
 
-### Общий вывод  
-В исследовании приняли участие 5 моделей : 'LightGBM', 'Catboost', 'Gradient_Boosting', 'LinearRegression', 'RandomForestRegressor'  
-Основной метрикой тестрирования стала метрика RMSE.
-На первом этапе исследования был произведен анализ данных и заполнены пропущенные значения.
-На втором этапе работы было протестировано 5 моделей прогнозирования. 
-Наилучшей и рекомендованной к использованию моделью признана LightGBM - со значением RMSE на тестовой выборке = 1654.23,  временем обучения = 1,5 минуты, временем предсказания 10 сек на учебном сервере.
+### Project Structure
+1. Loading and processing data: filling in missing values, grouping by features, finding duplicates, visualizing results;  
+2. Training gradient boosting models, analyzing learning speed;  
+3. Training prediction models requiring dummy transformation - linear regression, random forest.  
+4. Model validation and selection of the best.  
+
+### Overall Conclusion 
+- Five models participated in the study: 'LightGBM', 'Catboost', 'Gradient_Boosting', 'LinearRegression', 'RandomForestRegressor'. 
+- The main testing metric was the RMSE metric.  
+- In the first stage of the study, data analysis was performed and missing values were filled in.  
+- In the second stage of work, 5 forecasting models were tested.  
+- The best and recommended model for use was recognized as LightGBM - with an RMSE value on the test sample = 1654.23, training time = 1.5  minutes, prediction time 10 sec on the training server.  
