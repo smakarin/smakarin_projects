@@ -1,69 +1,76 @@
 
-## Прогнозирование популярности видео-игр
+## Forecasting Video Game Popularity
 
-### Набор инструментов
+### Toolset
 
-Предобработка данных: работа с пропусками, группировка таблиц, обработка дубликатов, pandas;   
-Визуализация данных: seaborn и plotly;   
-Проверка гипотез, библиотека scipy.  
+Data preprocessing: handling missing values, table merging, duplicate handling, pandas;  
+Data visualization: seaborn and plotly;  
+Hypothesis testing: scipy library.  
 
-### Вводные данные
+### Introduction
 
-В данном проекте из открытых источников доступны исторические данные о продажах игр, оценки пользователей и экспертов, жанры и платформы (например, Xbox или PlayStation).  
-Имеются размеченные данные: информация об играх, платформах, оценках, количестве проданных копий с разбивкой по регионам и возрастным группам.
-### Цель
-Выявить закономерности в продажах различных жанров и платформ. Определить успешные жанры. Проверить предложенные гипотезы.  
-### Структура проекта  
-1. Изучение общей информации в имеющемся файле.
-2. Подготовка данных для анализа.
-3. Исследовательский анализ данных:
-    * Изучение количества выпущенных игр по годам;
-    * Анализ продаж игр на разных платформах за все время;
-    * Определение периода, по которому можно построить прогноз на 2017 год;
-    * Анализ платформ и выбор наиоблее перспективных;
-    * Есть ли разница продаж каждой игры на разных платформах?
-    * Как влияют отзывы пользователей и критиков на продажи?
-    * Анализ прибыльности разных жанров.
-4. Составление портрета пользователя каждого региона:  
-    * Топ-5 самых популярных платформ;
-    * Топ-5 самых популярных жанров;
-    * Влияет ли рейтинг ESRB на продажи в отдельном регионе?
-5. Проверка гипотез:
-    * Средние пользовательские рейтинги платформ Xbox One и PC одинаковые;
-    * Средние пользовательские рейтинги жанров Action (англ. «действие») и Sports (англ. «виды спорта») разные.
-6. Общий вывод  
+In this project, historical data from open sources is available on video game sales, user and expert ratings, genres, and platforms (e.g., Xbox or PlayStation).
+The provided dataset includes information about games, platforms, ratings, sales by region, and age groups.  
 
-### Общий вывод
+### Objective
+The goal is to identify patterns in the sales of different genres and platforms, determine successful genres, and test proposed hypotheses.  
+### Project Structure  
+1. Exploring the general information in the provided dataset.
+2. Data preparation for analysis.
+3. Exploratory data analysis:
+- Examining the number of games released per year.
+- Analyzing game sales on different platforms over time.
+- Identifying a time period for forecasting sales in 2017.
+- Analyzing platforms and selecting the most promising ones.
+- Investigating differences in sales for each game on different platforms.
+- Exploring the impact of user and critic ratings on sales.
+- Analyzing the profitability of different genres.
+4. Creating a user profile for each region:
+- Top 5 popular platforms.
+- Top 5 popular genres.
+- Examining the influence of ESRB rating on sales in each region.
+5. Hypothesis testing:
+- Comparing the average user ratings of Xbox One and PC platforms.
+- Comparing the average user ratings of Action and Sports genres.
+6. Overall conclusion. 
 
-В результате проведенного анализа были сделаны следующие выводы:
-1. Комментарии по исследованию:
-Для анализа были взяты данные, начиная с 2012 года. Более старые данные не актуальны из-за смены поколений игровых платформ;
-2. Выводы по исследованию платформ:
-    * Потенциально наиболее прибыльными в 2017 году платформами являются PS4 и XOne. Также не стоит упускать из виду платформы 3DS и WiiU, которые, очень популярны в Японии и также находятся в лидерах по продажам.
-    * Продажи для PC держатся на одном уровне и не зависят от смены платформ;
-    * Наибольшие медианные продажи приходятся на платформы PS3, PS4, X360, Xone. Чуть ниже располагаются Wii и WiiU;
-    * Средний пользовательский рейтинг платформ XOne и PC равен.
-3. Выводы по исследованию игр
-    * Оценки критиков влияют на продажи игр, а оценки пользователей нет. Исключение - игр для платформ от компании Nintendo - WiiU, Wii, DS и 3DS;
-    * Самое большое количество игр выпускается в жанре Action. Самым прибыльным жанром является жанр Shooter;
-    * Жанр Platform входит в тройку по прибыльности, но находится в конце списка по количеству выпускаемых игр;
-    * Средний пользовательский рейтинг игр жанра Action выше, чем у жанра Sports.
-4. Выводы по изучению портрета пользователей
-    * Портреты пользователей в Северной Америке и Европе похожи, за исключением предпочтений в выборе игровой платформы - в Европе больше любят PS, в Америке Xbox.
-    * Наиболее популярные жанры в Европе и Америке это Action, Shooter и Sports. Наиболее популярный рейтинг - M.
-    * Портрет пользователя в Японии очень сильно отличается от Европы и Северной Америки:
-    * В топ-5 самых популярных входят только местные платформы (PS и Nintendo), Xbox нет в топ-5 - самой популярной платформой является портативная 3DS.
-    * Самым популярным жанром является Role-Playing, а на пятое место попали игры Fighting.
-    * Много локальных игр, которые не вышли на международный рынок и их продажи занимают больше половины рынка.
-    * Самыми популярными играми являются игры с рейтингом E и T. Рейтинг M только на 3 месте, не включая неопределенный.
-5. Обобщенные портреты пользователей
-    * Северная Америка - старше 17 лет, предпочитает американские товары, любит играть дома, любит активные игры (Action, Shooter) и увлечен спортом;
-    * Европа - средний пользователь похож на американского за исключением того, что не привязан к стране производителю платформ;
-    * Япония - средний пользователь - школьник, который любит играть вне дома по пути в школу или в школе, любит японские игры и платформы, создавать своих персонажей в играх и ассоциировать себя с ними. Также больше остальных он предпочитает Fighting.  
+### Conclusion
+
+Based on the analysis conducted, the following conclusions can be drawn:
+
+1. General comments on the study: 
+- The analysis used data starting from 2012, as older data is not relevant due to the shift in gaming platforms.
+2. Conclusions on platform analysis:
+- The potentially most profitable platforms in 2017 are PS4 and XOne. However, platforms like 3DS and WiiU should not be overlooked, as they are very popular in Japan and have significant sales.
+- PC sales remain stable and unaffected by platform changes.
+- The platforms with the highest median sales are PS3, PS4, X360, and Xone. Wii and WiiU are slightly below in terms of sales.
+- The average user ratings for XOne and PC platforms are similar.
+3. Conclusions on game analysis:
+- Critic ratings have an impact on game sales, while user ratings do not. However, this trend is not applicable to games for Nintendo platforms (WiiU, Wii, DS, and 3DS).
+- The most frequent genre is Action, while the most profitable genre is Shooter.
+- The Platform genre ranks third in terms of profitability but has fewer game releases.
+- The average user rating for Action games is higher than that for Sports games.
+4. Conclusions on user profiles:
+- User profiles in North America and Europe are similar, except for platform preferences. PS is more popular in Europe, while Xbox is more popular in America.
+- The most popular genres in Europe and North America are Action, Shooter, and Sports. The most common rating is M.
+- The user profile in Japan differs significantly from Europe and North America:
+- Only local platforms (PS and Nintendo) are in the top 5, with Xbox not making the list. The most popular platform in Japan is the portable 3DS.
+- The most popular genre is Role-Playing, and Fighting games made it to the fifth position.
+- Many local games that have not been released internationally account for over half of the market.
+- The most popular games have ratings of E and T. The M rating ranks third, excluding "Undefined."
+5. Generalized user profiles:
+- North America: Users are over 17 years old, prefer American products, enjoy playing at home, prefer active games (Action, Shooter), and have an interest in sports.
+- Europe: The average user profile is similar to North America, with the exception that they are not tied to a specific country as the platform manufacturer.
+- Japan: The average user is a school student who enjoys playing games on the way to school or at school, prefers Japanese games and platforms, enjoys creating their own characters in games and associating themselves with them. They also have a higher preference for Fighting games.  
+
+Overall, this analysis provides valuable insights into the video game market, platform preferences, genre profitability, and user profiles in different regions. These findings can inform marketing and development strategies for video game companies.
     
-### Резюме  
+### Summary  
 
-Основными критериями, определяющими успешность игры во всем мире в 2017 году будут:
-* Игра выпущена для платформ PS4 и XOne, при локализации в Японии стоит подумать о выпуске игры для портативных платформ;
-* Игра должна быть жанра Shooter, Platform или Sports. Жанр Action популярен среди пользователей, но его медианные продажи ниже перечисленных ранее.
-* Рейтинг игры для Северной Америки и Европы должен быть обозначен, как М. При выпуске игры в Японии стоит подумать о снижении рейтинга до E.
+The key criteria for a successful game worldwide in 2017 are as follows:
+
+- The game should be released for platforms such as PS4 and XOne. For localization in Japan, considering releasing the game for portable platforms would be beneficial.
+- The game should fall into the Shooter, Platform, or Sports genres. While the Action genre is popular among users, its median sales are lower compared to the previously mentioned genres.
+- The game should have an M rating for North America and Europe. When releasing a game in Japan, consider lowering the rating to E.  
+
+These findings can guide game developers and publishers in making strategic decisions regarding platform selection, genre focus, and rating considerations to maximize the success of their games in the global market.
