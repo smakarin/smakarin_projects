@@ -1,32 +1,30 @@
 
-## Определение тональности текста
-### Стек инструментов
-Библиотеки nltk и spacy.
-Предобработка текстов, лемматизация и векторизация.
-Модели sklearn и BERT.
-### Вводные данные
-Интернет-магазин запускает новый сервис, в котором пользователи могут редактировать и дополнять описания товаров.  
-Необходимо построить модель классификации комментариев на позитивные и негативные.  
-В нашем распоряжении есть набор данных с разметкой о токсичности правок.  
+## Text Sentiment Analysis
+### Toolkit
+Libraries nltk and spacy.  
+Text preprocessing, lemmatization, and vectorization.  
+Sklearn models and BERT.  
+### Introduction
+An online store is launching a new service where users can edit and augment product descriptions.  
+We need to build a classification model for comments into positive and negative ones.  
+We have a dataset with toxicity labels available.  
 
-### Цель
-Обучить модель классифицировать комментарии на позитивные и негативные.
+### Goal
+Train a model to classify comments into positive and negative.
 
-### Структура проекта  
+### Project Structure 
 
-1. Изучение данных и подготовка их для обучения:
-    * Проведение лемматизации;
-    * Очистка от лишних символов;
-    * Векторизация комментариев с помощью метода tf_idf;
-2. Обучение классических моделей прогнозирования;
-3. Использование BERT;
-4. Анализ результатов.
+1. Studying the data and preparing it for training:
+   * Conducting lemmatization;
+   * Cleaning up unnecessary symbols;
+   * Vectorization of comments using the tf_idf method;
+   * Training traditional prediction models;
+2. Using BERT;
+3. Analyzing the results.
 
-### Общий вывод
+### General Conclusion
 
-В данной работе мы обучили модель классифицировать комментарии на позитивные и негативные.
-Наилучший результат по качеству и скорости работы был показан моделью логистической регрессии, обученной на векторизированных и сбалансированных данных - f1 = 0.76, Wall time: 6.6 s
+In this work, we trained a model to classify comments into positive and negative categories. The logistic regression model, trained on vectorized and balanced data, displayed the best performance in terms of quality and speed - with an f1 score of 0.76 and a wall time of 6.6 seconds.  
 
-Использование BERT дало следующие результаты:
-На выборке из 200 комментариев BERT совместно с логистической регрессией показал результат f1 = 0.67 и время работы около 4х минут. Результат на выборке в 2000 комментариев был равен 0.72, время работы составило 35 минут.
-Можно предположить, что на полной выборке результат будет примерно равен 0.8, но обучение займет в этом случае очень много времени.
+The use of BERT yielded the following results:  
+With a sample of 200 comments, BERT, in combination with logistic regression, achieved an f1 score of 0.67 with a run time of about 4 minutes. On a sample of 2000 comments, the result was 0.72, with a runtime of 35 minutes. We can hypothesize that the result on the full dataset would be approximately 0.8, but the training would take a significant amount of time in this case.  

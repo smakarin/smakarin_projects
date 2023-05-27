@@ -1,71 +1,66 @@
 
-# Прогнозирование оттока клиентов для телеком-компании
+# Customer Churn Prediction for Telecom Company
 ***
 
-### Набор инструментов
-* Предобработка данных: работа с пропусками, группировка таблиц, обработка дубликатов, pandas;
-* Исследовательский анализ данных: seaborn и plotly;
-* Применение стандартных моделей прогнозирования и моделей градиентного бустинга: sklearn, LigtGBM, CatBoost;
-* Проверка результатов на валидационной и тестовых выборках.
+### Toolset
+* Data preprocessing: handling missing values, table grouping, duplicate handling, pandas;
+* Exploratory Data Analysis: seaborn and plotly;
+* Applying standard forecasting models and gradient boosting models: sklearn, LightGBM, CatBoost;
+* Checking the results on validation and test samples.
 
-### Вводные данные
+### Input Data
 
-В данном проекте стоит задача построить модель классификации пользователей на тех, кто в ближайшем будущем склонен перейти к конкуренту и тех, кто останется. В распоряжении есть следующие данные: персональные данные о некоторых клиентах, информация об их тарифах и договорах.  
+In this project, the task is to build a model that classifies users into those who are likely to switch to a competitor in the near future and those who will stay. We have the following data at our disposal: personal information about some clients, information about their tariffs and contracts.
 
-Основная метрика: AUC-ROC.
+Main metric: AUC-ROC.
 
-Дополнительная метрика: Accuracy.
+Additional metric: Accuracy.
 
-Критерии оценки:
+Assessment criteria:
 
-- AUC-ROC < 0.75 — 0 sp
-- 0.75 ≤ AUC-ROC < 0.81 — 4 sp
-- 0.81 ≤ AUC-ROC < 0.85 — 4.5 sp
-- 0.85 ≤ AUC-ROC < 0.87 — 5 sp
-- 0.87 ≤ AUC-ROC < 0.88 — 5.5 sp
-- AUC-ROC ≥ 0.88 — 6 sp
+* AUC-ROC < 0.75 — 0 sp
+* 0.75 ≤ AUC-ROC < 0.81 — 4 sp
+* 0.81 ≤ AUC-ROC < 0.85 — 4.5 sp
+* 0.85 ≤ AUC-ROC < 0.87 — 5 sp
+* 0.87 ≤ AUC-ROC < 0.88 — 5.5 sp
+* AUC-ROC ≥ 0.88 — 6 sp
 
-### Цель
-Создание модели, которая предсказывает поведение клиента на основании определенных принаков.  
-Имеются размеченные данные: персональные данные о некоторых клиентах, информация об их тарифах и договорах.
+### Goal
+To create a model that predicts customer behavior based on certain features.
+There is labeled data: personal data about some customers, information about their tariffs and contracts.
 
-### Структура проекта
+### Project Structure
 
-1. Загрузка и предобработка данных;  
+1. Data loading and preprocessing;
 
 
-2. Исследовательский анализ данных:  
+2. Exploratory data analysis:
 
-    * Анализ поведения активных клиентов компании и ушедших;
-    * Анализ динамики изменения количества новых клиентов;
-    * Анализ влияния способов оплаты на месячный платеж;
-    * Анализ влияния тарифа (интернет+телефон, только телефон, только интернет) на месячный платеж;
-    * Исследовательский анализ. Вывод.  
-    
+   * Analysis of the behavior of active company clients and those who left;
+   * Analysis of the dynamics of the number of new customers;
+   * Analysis of the influence of payment methods on the monthly payment;
+   * Analysis of the impact of the tariff (internet+phone, phone only, internet only) on the monthly payment;
+   * Exploratory data analysis. Conclusion.
    
-3. Создание предиктивной модели:  
+3. Creating a predictive model:  
 
-    * Подготовка данных для прогнозирования;
-    * Работа с признаками - кодирование и масштабирование признаков, создание новых, удаление ненужных;
-    * Upsampling данных;
-    * Подготовка к созданию моделей.
-    * Предварительное обучение моделей;
-    * Подбор гиперпараметров у лучших моделей;
-    * Анализ моделей, валидация результата на тестовой выборке;
-    * Проверка результата на адекватность.  
-      
-      
-    
-4. Общий Вывод
+    * Data preparation for forecasting;
+    * Feature engineering - encoding and scaling features, creating new ones, removing unnecessary ones;
+    * Upsampling data;
+    * Preparation for model creation.
+    * Preliminary model training;
+    * Hyperparameter tuning for the best models;
+    * Model analysis, result validation on the test sample;
+    * Checking the result for adequacy.  
 
-### Общий вывод
+### General Conclusion
 
-В данной работе были проведены предобработка данных, ислледовательский анализ данных и была создана модель прогнозирования уйдет ли клиент к конкурентам или нет.  
+In this work, we performed data preprocessing, exploratory data analysis, and created a model to predict whether a client will switch to competitors or not.
 
-На этапе исследовательского анализа был сделан вывод о том, что интернет пользователи с помесячной не автоматической оплатой более привержены к уходу от сотрудничества с нашей компанией. И на это могут влиять, как новые конкуренты, так и проблемы с формой или алгоритмом оплаты на сайте.
+During the exploratory analysis, it was concluded that internet users with non-automatic monthly payments are more inclined to terminate collaboration with our company. This could be influenced by new competitors as well as problems with the form or payment algorithm on the site.
 
-На этапе создания модели прогнозирования мы обучили несколько различных моделей, лучший результат показала модель градиентного бустинга из библиотеки sklearn. 
-* AUC-ROC = 0.91,  
-* accuracy_score = 0.87
+In the phase of creating the predictive model, we trained several different models, with the best result shown by the gradient boosting model from the sklearn library.
 
-Данный результат прошел проверку на адекватность и выше максимального целевого результата, поставленного заказчиком.
+* AUC-ROC = 0.91,
+* Accuracy score = 0.87
+This result passed an adequacy check and is above the maximum target result set by the client.

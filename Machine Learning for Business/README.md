@@ -1,39 +1,38 @@
 
-## Анализ возможной прибыли и рисков добычи нефти в регионе
-### Набор инструментов
-Отработка техники boostrap;   
-Работа с метриками бизнеса: валовая, операционная, чистая прибыль, конверсии, онлайн и офлайн показатели;  
-Визуализация seaborn.
-### Вводные данные
-Данный проект выполняется для добывающей компании, которой нужно решить, где бурить новую скважину.
-Предоставлены данные о пробах нефти в трёх регионах: в каждом 10 000 месторождений, где измерили качество нефти и объём её запасов.
-Необходимо построить модель машинного обучения, которая поможет определить регион, где добыча принесёт наибольшую прибыль.
-### Цель
+## Analysis of Potential Profit and Risks of Oil Production in a Region
+### Toolkit
+Applying the bootstrap technique;  
+Working with business metrics: gross, operating, net profit, conversions, online and offline indicators;  
+Seaborn visualization.  
+### Introduction
+This project is being carried out for an extraction company that needs to decide where to drill a new well.  
+Data on oil samples in three regions are provided: in each, 10,000 deposits were measured for oil quality and volume of its reserves.  
+A machine learning model must be built that will help determine the region where extraction will bring the most profit.  
+### Objective
 
-Выбрать регион с максимальной прибылью от добычи нефти и минимальным риском ошибки.
+To choose the most profitable region with a minimal risk of error.
 
-### Структура проекта
+### Project Structure
 
-1. Загрузка и подготовка данных.
-2. Обучим и проверка на валидационной выборке модели для каждого региона. Используем метрику RMSE.
-3. Создание фукции для расчета прибыли.
-4. Примеение Bootstrap для расчета рисков и прибыли для каждого региона.
-5. Выбор регион дляи разработки месторождений. 
+1. Loading and preparing data.
+2. Training and testing on a validation sample model for each region. We will use the RMSE metric.
+3. Creation of a function for calculating profit.
+4. Applying Bootstrap to calculate risks and profit for each region.
+5. Choosing a region for field development.
 
-### Общий вывод  
+### Overall Conclusion
 
-В данном проекте был проведен анализ нефтяных месторождений в трех регионах с целью выбора наиболее перспективного.
-Для этого были произведены следующие действия:
+In this project, an analysis of oil fields in three regions was carried out to select the most promising one.  
+The following actions were taken:
 
-* Произведена первичная обработка данных;
-* Произведен первичный анализ каждого региона, изучены корреляции признаков с целевым, изучены распределения целевого признака.
-    * Регионы 0 и 2 схожи друг с другом - имеют нормальное распределение объемов месторождений и схожии корреляции признаков.
-    * Регион 1 имеет 100% корреляцию одного признака с целевым. Распределение объемов не нормальное;
-* Обучены модели линейной регрессии и произведены предсказания объема месторождений каждого региона.
-    * Наилучший результат прогнозирования получен в Регионе 1 - среднеквадратичное отклонение меньше 1 тыс баррелей.
-    * В Регионах 0 и 2 отклонение равно 37 и 40 тыс. баррелей, но средние значения всей выборки спрогнозированы точно;
-* Найден минимальный средний объем месторождений в регионе, при котором добыча нефти будет безубыточной - 11 111 барелей;
-* Построена функция расчета прибыли по набору отобранных месторождений и предсказаний модели. Для выборки из топ-200 самых объемных (согласно прогнозы модели) месторождений наиболее прибыльным является Регион 2;
-* Применена техника Bootstrap с 1000 выборок для нахождения средней прибыли, 95% доверительного интервала и риска убытков.
-    * Риска получения убытков при текущем уровне цен нет ни в одном из регионов.
-    * По средним значениям прибыли и доверитльному интервалу наиболее прибыльным регионом является Регион_1.
+* Primary data processing was carried out;
+* A primary analysis of each region was carried out, the correlations of features with the target and the distributions of the target feature were studied.
+    * Regions 0 and 2 are similar to each other - they have a normal distribution of deposit volumes and similar feature correlations.
+    * Region 1 has a 100% correlation of one feature with the target. The volume distribution is not normal;
+* Linear regression models were trained and predictions of the volume of deposits in each region were made.
+    * The best prediction result was obtained in Region 1 - the root mean square deviation is less than 1,000 barrels.
+    * In Regions 0 and 2, the deviation is equal to 37 and 40 thousand barrels, but the average values of the entire sample are predicted accurately;
+* In Regions 0 and 2, the deviation is equal to 37 and 40 thousand barrels, but the average values of the entire sample are predicted accurately;
+* The Bootstrap technique with 1000 samples was used to find the average profit, 95% confidence interval, and risk of losses.
+    * There is no risk of losses at the current price level in any of the regions.
+    * By average profit values and confidence interval, the most profitable region is Region_1.
