@@ -1,44 +1,44 @@
 
-## Моделирование процесса обогащения золотоносной руды
-### Набор инструментов
-Глубокая предобработка данных: соединение нескольких таблиц, заполнение пропусков, поиск выбросов и аномалий;  
-Создание метрики SMAPE и применение ее в валидации моделей;  
-Визуализация исходных данных, библиотеки matplotlib и seaborn;
-Тестирование моделей библиотеки sklearn.
-### Вводные данные
-Горнодобывающая компания разрабатывает модель прогнозирования качества обогащения руды. Алгоритм рассчитывает выход золота из сырья. 
-Модель позволяет принимать на вход только богатое сырье на основании небольших проб.
-### Цель проекта
-Создать модель, предсказывающую содержание драгоценных металлов и шлака на различных этапах обогащения.
-### Структура проекта  
-1. Подготовка данных.
-    * Изучение имеющихся файлов;
-    * Проверка правильности расчета эффективности обогащения;
-    * Анализ признаков, недоступных в тестовой выборке;
-    * Предобработка данных и заполнение пропусков;
-2. Анализ данных.
-    * Изучение того, как меняется концентрация металлов (Au, Ag, Pb) на различных этапах очистки;
-    * Сравнение распределения размеров гранул сырья на обучающей и тестовой выборках;
-    * Исследование суммарной концентрацию всех веществ на разных стадиях: в сырье, в черновом и финальном концентратах.
-3. Построение модели прогнозирования.
-    * Создание функции для вычисления итоговой sMAPE;
-    * Обучение разных моделей и оценка их качества кросс-валидацией;
-    * Выбор лучшей модели и проверка её работы на тестовой выборке.
-4. Вывод.
+## Modeling the process of gold ore enrichment
+### Toolkit
+Deep data preprocessing: combining multiple tables, filling in missing values, identifying outliers and anomalies.  
+Creating the SMAPE metric and applying it in model validation.  
+Visualization of the raw data using matplotlib and seaborn libraries.  
+Testing models from the sklearn library.  
+### Input data
+A mining company is developing a model to predict the quality of ore enrichment. The algorithm calculates the gold yield from the raw material. The model can only accept rich ore based on small samples as input.
+### Goal
+Create a model that predicts the content of precious metals and slag at various stages of ore enrichment.
+### Project structure  
+1. Data Preparation.
+   * Study the available files.
+   * Verify the correctness of the enrichment efficiency calculation.
+   * Analyze features that are not available in the test dataset.
+   * Preprocess the data and fill in missing values.
+2. Data Analysis.
+   * Explore how the concentration of metals (Au, Ag, Pb) changes at different stages of purification.
+   * Compare the particle size distribution of the feed material in the training and test datasets.
+   * Investigate the total concentration of all substances at different stages: in the feed material, rougher and cleaner concentrates.
+3. Building the Prediction Model.
+   * Create a function to calculate the final sMAPE (symmetric mean absolute percentage error).
+   * Train different models and evaluate their quality using cross-validation.
+   * Select the best model and assess its performance on the test dataset.
+4. Conclusion.
 
-### Общий вывод  
-Целью настоящего проекто было составление модели для прогнозирования метрики sMAPE - симметричного среднего абсолютного процентного отклонения.  
-В третьем шаге была успешно создана модель Случайного леса, готовая для ввода в экслуатацию.  
+### Overall conclusion  
+The goal of this project was to build a model for predicting the sMAPE (symmetric mean absolute percentage error) metric. In the third step, a Random Forest model was successfully developed and ready for deployment.
 
-Задачами проекта являлись следующие пункты:  
+The project tasks included:
 
-*Подготовка данных:*  
-На данном этапе были обработаны пропущенные значения и удалены неизвестные таргеты с целью последующего постоения моделей. 
+1. Data Preparation:
+   * Handling missing values and removing rows with unknown targets to prepare the data for model building.
+2. Data Analysis:
+   * Discovering patterns such as the increasing concentration of gold at each stage of enrichment.
+   * Observing that the concentration of silver in the final concentrate is lower than in the feed material.
+   * Noting that the lead concentration increases after primary purification but remains stable afterward.
+   * Analyzing the overall concentration of metals in the solution, which shows significant growth after flotation but remains relatively constant during subsequent purification stages.
+3. Model Building and Training:
+   * Testing four models: Regression, Decision Tree, Random Forest, and K-Nearest Neighbors.
+   * Selecting the Random Forest model as the best performer, with an sMAPE value of 5.99, which meets the acceptable level for this project.    
 
-*Исследовательский анализ данных:*  
-Замечены следующие закономерности - концентрация золота на всех этапах обогащения планомерно растет. Концентрация серебра в финальном концентрате ниже, чем в сырье. Доля свинца вырастает после первичной очистки, но потом не изменяется.
-Общая концентрация металлов в растворе показывает серьезный рост после флотации, однако на последующей очистке не растет.  
-
-*Построить и обучить модель:*   
-Протестировано 4 модели - регрессия, решаюзее дерево, случайный лес и ближайшие соседи.   
-Наилучшей моделью стала модель RandomForest, которая показала значение sMAPE = 5,99, что является допустимым уровнем в данном проекте.
+In conclusion, the project successfully achieved the goal of building a model to predict the sMAPE metric. The Random Forest model demonstrated good performance and can be deployed for operational use.
